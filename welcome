@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapid Resolve</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .page {
+            text-align: center;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        input, button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            font-size: 16px;
+            width: 80%;
+            max-width: 300px;
+        }
+
+        button {
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <!-- Welcome Page -->
+    <div id="welcomePage" class="page">
+        <h1>Welcome to Rapid Resolve</h1>
+        <button onclick="goToNextPage()">Proceed</button>
+    </div>
+
+    <!-- Signup or Login Page -->
+    <div id="authPage" class="page hidden">
+        <h2>Select an Option</h2>
+        <button onclick="goToSignup()">Sign Up</button>
+        <button onclick="goToLogin()">Log In</button>
+    </div>
+
+    <!-- Signup Form -->
+    <div id="signupPage" class="page hidden">
+        <h2>Sign Up</h2>
+        <form onsubmit="return false;">
+            <input type="text"
